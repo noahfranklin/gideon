@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="470" viewBox="0 0 920 470" role="img" aria-label="Anatomy of a Gideon skill">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0f19"/><stop offset="1" stop-color="#111827"/></linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
+  </defs>
+  <style>.t{font-family:Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}.h{font-weight:700;fill:#f1f5f9}.s{fill:#94a3b8}.d{fill:#64748b}.m{font-family:'JetBrains Mono',Menlo,Consolas,monospace}.lbl{font-size:11px;font-weight:700;letter-spacing:1px}</style>
+  <rect width="920" height="470" rx="16" fill="url(#bg)" stroke="#1f2937"/>
+  <text class="t h" x="36" y="42" font-size="21">Anatomy of a Gideon skill</text>
+  <text class="t d" x="36" y="63" font-size="12">Every SKILL.md follows the same shape — so offense always comes with detection and a fix.</text>
+
+  <!-- frontmatter -->
+  <rect x="36" y="80" width="848" height="60" rx="9" fill="#0f172a" stroke="#1f2937"/>
+  <rect x="36" y="80" width="4" height="60" rx="2" fill="url(#acc)"/>
+  <text class="t lbl s" x="54" y="102">1 · FRONTMATTER</text>
+  <text class="t m d" x="54" y="122" font-size="11.5">name: web-app-pentest</text>
+  <text class="t m d" x="54" y="136" font-size="11.5">description: "Use when… "  ← how the agent knows WHEN to load it</text>
+
+  <!-- authorization gate -->
+  <rect x="36" y="150" width="848" height="52" rx="9" fill="#0f172a" stroke="#b91c1c"/>
+  <text class="t lbl s" x="54" y="172">2 · AUTHORIZATION GATE</text>
+  <text class="t d" x="54" y="191" font-size="12">Scope, rules of engagement, data-handling &amp; safety checks — before any active testing.</text>
+
+  <!-- methodology -->
+  <rect x="36" y="212" width="848" height="52" rx="9" fill="#0f172a" stroke="#1f2937"/>
+  <rect x="36" y="212" width="4" height="52" rx="2" fill="url(#acc)"/>
+  <text class="t lbl s" x="54" y="234">3 · METHODOLOGY</text>
+  <text class="t d" x="54" y="253" font-size="12">A phased workflow mapped to a recognized standard (WSTG, PTES, ATT&amp;CK…).</text>
+
+  <!-- techniques triad -->
+  <text class="t lbl s" x="36" y="288">4 · TECHNIQUES — each one is a triad</text>
+  <rect x="36" y="298" width="272" height="70" rx="9" fill="#111827" stroke="#b91c1c"/>
+  <text class="t h" x="52" y="322" font-size="13">🔴 Test</text>
+  <text class="t d" x="52" y="343" font-size="11.5">the offensive technique,</text>
+  <text class="t d" x="52" y="358" font-size="11.5">by name, in scope</text>
+
+  <rect x="324" y="298" width="272" height="70" rx="9" fill="#111827" stroke="#3b82f6"/>
+  <text class="t h" x="340" y="322" font-size="13">🔎 Detect</text>
+  <text class="t d" x="340" y="343" font-size="11.5">the signal defenders</text>
+  <text class="t d" x="340" y="358" font-size="11.5">should see</text>
+
+  <rect x="612" y="298" width="272" height="70" rx="9" fill="#111827" stroke="#15803d"/>
+  <text class="t h" x="628" y="322" font-size="13">🔵 Fix</text>
+  <text class="t d" x="628" y="343" font-size="11.5">the concrete</text>
+  <text class="t d" x="628" y="358" font-size="11.5">remediation</text>
+
+  <!-- references -->
+  <rect x="36" y="384" width="848" height="60" rx="9" fill="#0f172a" stroke="#1f2937"/>
+  <rect x="36" y="384" width="4" height="60" rx="2" fill="url(#acc)"/>
+  <text class="t lbl s" x="54" y="406">5 · REFERENCES/</text>
+  <text class="t d" x="54" y="426" font-size="12">Printable checklists, report templates, eval harnesses — the reusable artifacts.</text>
+</svg>

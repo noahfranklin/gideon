@@ -34,6 +34,19 @@ Two halves of one job:
 - **Standards-mapped.** OWASP (Web/API/LLM/WSTG/MASTG/ASVS), MITRE ATT&CK (incl. Cloud & Containers) & ATLAS, PTES, NIST SP 800-115 & AI RMF, CIS.
 - **Portable & CI-checked.** Plain Markdown + frontmatter (with a machine-readable [`skills.json`](skills.json) catalog); a zero-dependency validator and GitHub Actions keep every skill well-formed.
 
+## 🗺️ Architecture & workflow
+
+<img src="assets/workflow.svg" alt="Gideon engagement workflow" width="100%" />
+
+<details>
+<summary><strong>System architecture</strong> (click to expand)</summary>
+
+<img src="assets/architecture.svg" alt="Gideon architecture" width="100%" />
+
+</details>
+
+📖 Full write-ups: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** · **[docs/WORKFLOW.md](docs/WORKFLOW.md)**
+
 ## 🔗 How it fits together
 
 `red-team-ops` runs the engagement and routes each phase to the right skill; `vuln-chaining` correlates everything into attack paths; `report-writing` presents it.
