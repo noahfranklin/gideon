@@ -2,15 +2,15 @@
 
 # 🛡️ Gideon
 
-### Offensive & defensive security skills for Claude Code and Codex
+### A complete offensive & defensive security skill suite for Claude Code and Codex
 
 *"With the three hundred… I will save you." — Judges 7:7*
 *A small, disciplined force — recon, precision, and clever tactics — beats a bigger enemy. That's red-teaming done right.*
 
-[![Skills](https://img.shields.io/badge/skills-5-blue)](#-the-skills)
+[![Skills](https://img.shields.io/badge/skills-21-blue)](#-the-skills)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Validate Skills](https://github.com/noahfranklin/gideon/actions/workflows/validate-skills.yml/badge.svg)](.github/workflows/validate-skills.yml)
-[![OWASP](https://img.shields.io/badge/mapped-OWASP%20API%20%2B%20LLM%20Top%2010-orange)](#-standards-mapping)
+[![Standards](https://img.shields.io/badge/mapped-OWASP%20%7C%20MITRE%20ATT%26CK%20%7C%20PTES%20%7C%20NIST-orange)](#-standards-mapping)
 
 </div>
 
@@ -18,29 +18,68 @@
 
 ## What is this?
 
-**Gideon** is a battle-tested collection of [Agent Skills](https://docs.claude.com/en/docs/claude-code/skills) that turn Claude Code (and Codex-style coding agents) into a rigorous, *authorized* security engineer. It covers both halves of the job:
+**Gideon** turns Claude Code (and Codex-style agents) into a rigorous, *authorized* security engineer across **every domain**: web, mobile, API, AI/LLM, network & infrastructure, network devices, wireless, Active Directory, Entra ID / cloud, and containers — plus the connective tissue that real red-teamers live in: reconnaissance, privilege escalation, post-exploitation, social engineering, the full engagement lifecycle, and **vulnerability chaining & correlation**.
 
-- **🔴 Offense** — structured red-team methodology for APIs and AI/LLM applications, so you find the holes before an attacker does.
-- **🔵 Defense** — secure-by-design checklists, hardening playbooks, and threat models, so you build products that don't have the holes in the first place.
+Two halves of one job:
 
-Every skill is **defensive in purpose**: the goal is to help teams keep their own products (or clients they're authorized to test) safe. There are no drop-in weaponized exploits, no mass-scanning tooling, and no detection-evasion tradecraft. What you get is *methodology, test design, detection signals, and concrete remediation* — the stuff that actually makes software secure.
+- **🔴 Offense** — attack-path-driven methodology to find what an attacker would find, *chain* small bugs into big ones, and hunt the novel/logic vulnerabilities scanners miss.
+- **🔵 Defense** — secure-by-design checklists, hardening playbooks, threat models, and detection guidance so you fix the causes, not just the symptoms.
 
-## Why you'll want it
+**Every skill is defensive in purpose and authorization-first.** They deliver *methodology, techniques by name, detection signals, and concrete remediation* — not drop-in weaponized exploits, mass-scanning tooling, or detection-evasion tradecraft. That's the line that keeps this useful for defenders and safe to publish.
 
-- **Standards-mapped, not vibes-based.** Grounded in OWASP API Security Top 10 (2023), OWASP Top 10 for LLM Applications (2025), OWASP ASVS, NIST AI RMF, and MITRE ATLAS.
-- **Portable.** Drop the `skills/` folder into `~/.claude/skills/` (Claude Code) or wherever your agent loads skills. Plain Markdown + frontmatter — no runtime, no lock-in.
-- **Complete workflows.** Each skill is an end-to-end playbook: scope → recon → test → verify → remediate → report, with copy-paste checklists and report templates.
-- **Authorization-first.** Every skill opens with a rules-of-engagement gate so the agent tests only what it's cleared to test.
+## ✨ What makes it different
+
+- **It chains.** The [`vuln-chaining`](skills/vuln-chaining/SKILL.md) skill combines low-severity primitives into high-impact exploit chains, reasons about attack paths **across domains** (web → cloud → identity), correlates findings to shared root causes, and hunts **novel/logic bugs** — then ranks fixes by how many paths they break.
+- **It's an orchestrated suite, not 20 silos.** [`red-team-ops`](skills/red-team-ops/SKILL.md) runs the engagement lifecycle and routes each phase to the right domain skill.
+- **Standards-mapped.** OWASP (Web/API/LLM/WSTG/MASTG/ASVS), MITRE ATT&CK (incl. Cloud & Containers) & ATLAS, PTES, NIST SP 800-115 & AI RMF, CIS.
+- **Portable & CI-checked.** Plain Markdown + frontmatter; a zero-dependency validator and GitHub Actions keep every skill well-formed.
 
 ## 🧩 The skills
 
-| Skill | Color | What it does |
-|-------|-------|--------------|
-| [`api-security-audit`](skills/api-security-audit/SKILL.md) | 🔴 | Full API pentest methodology mapped to OWASP API Top 10 — REST, GraphQL, gRPC, WebSocket. Test design, detection, and fixes for BOLA, broken auth, SSRF, and more. |
-| [`api-secure-design`](skills/api-secure-design/SKILL.md) | 🔵 | Secure-by-design review + hardening checklist for APIs: authN/authZ, rate limiting, schema validation, secrets, TLS, logging, CORS, inventory. |
-| [`llm-redteam`](skills/llm-redteam/SKILL.md) | 🔴 | Red-team methodology for AI/LLM apps mapped to OWASP LLM Top 10 — prompt injection (direct + indirect), tool/agent abuse, RAG poisoning, system-prompt leakage, plus an eval-harness approach for repeatable testing. |
-| [`llm-app-defense`](skills/llm-app-defense/SKILL.md) | 🔵 | Defense-in-depth for LLM apps: input/output mediation, least-privilege tool design, human-in-the-loop gates, RAG source hygiene, monitoring, and red-team CI. |
-| [`threat-model`](skills/threat-model/SKILL.md) | ⚪ | STRIDE + PASTA + attack-tree threat modeling for web, API, and AI systems, with data-flow diagrams and a ready-to-fill deliverable. |
+**🎯 Operations & analysis**
+| Skill | What it does |
+|-------|--------------|
+| [`red-team-ops`](skills/red-team-ops/SKILL.md) | Full engagement lifecycle — RoE, threat emulation, kill chain, deconfliction, purple-team detection gaps, exec + technical reporting. Orchestrates the rest. |
+| [`vuln-chaining`](skills/vuln-chaining/SKILL.md) | Exploit chaining, cross-domain attack-path graphing, correlation to root causes, and novel/logic-bug hunting. The brain of the suite. |
+| [`recon-osint`](skills/recon-osint/SKILL.md) | Passive OSINT + active recon → a prioritized attack-surface inventory that feeds every domain skill. |
+| [`threat-model`](skills/threat-model/SKILL.md) | STRIDE / PASTA / attack trees for web, API, and AI systems. |
+| [`report-writing`](skills/report-writing/SKILL.md) | Turns findings into a landed report: finding structure, CVSS, reproduction test cases, PoCs with formatted HTTP request/response + highlighted payloads, remediation, exec + technical assembly. Black-box or gray-box. |
+
+**🌐 Application security**
+| Skill | What it does |
+|-------|--------------|
+| [`web-app-pentest`](skills/web-app-pentest/SKILL.md) | OWASP WSTG + Top 10 (2021): access control, injection, SSRF, auth, business logic. |
+| [`api-security-audit`](skills/api-security-audit/SKILL.md) | OWASP API Top 10 (2023): BOLA, broken auth, mass assignment, SSRF — REST/GraphQL/gRPC/WS. |
+| [`api-secure-design`](skills/api-secure-design/SKILL.md) | 🔵 Secure-by-design + hardening checklist (OWASP ASVS). |
+| [`mobile-pentest`](skills/mobile-pentest/SKILL.md) | OWASP MASTG/MASVS for Android & iOS: storage, crypto, platform, resilience. |
+
+**🤖 AI / LLM security**
+| Skill | What it does |
+|-------|--------------|
+| [`llm-redteam`](skills/llm-redteam/SKILL.md) | OWASP LLM Top 10 (2025) + MITRE ATLAS: prompt injection, tool/agent abuse, RAG poisoning, plus an eval-harness. |
+| [`llm-app-defense`](skills/llm-app-defense/SKILL.md) | 🔵 Defense-in-depth for LLM apps: I/O mediation, least-privilege tools, human-in-the-loop, red-team CI. |
+
+**🖧 Infrastructure, network & cloud**
+| Skill | What it does |
+|-------|--------------|
+| [`network-pentest`](skills/network-pentest/SKILL.md) | Internal/external network & service testing (PTES / NIST 800-115 / ATT&CK). |
+| [`network-device-pentest`](skills/network-device-pentest/SKILL.md) | Routers/switches/firewalls/VPNs: management plane, firmware/CVEs, config review. |
+| [`wireless-pentest`](skills/wireless-pentest/SKILL.md) | Wi-Fi WPA2/WPA3 personal & enterprise, evil-twin, segmentation. |
+| [`cloud-pentest`](skills/cloud-pentest/SKILL.md) | AWS/Azure/GCP IAM privesc, exposed storage/secrets, SSRF-to-metadata (ATT&CK Cloud / CIS). |
+| [`container-k8s-pentest`](skills/container-k8s-pentest/SKILL.md) | Docker/Kubernetes: escapes, RBAC, control-plane, pod→cluster→cloud escalation. |
+
+**🪪 Identity**
+| Skill | What it does |
+|-------|--------------|
+| [`active-directory-pentest`](skills/active-directory-pentest/SKILL.md) | On-prem AD: Kerberos, delegation, ACL/GPO abuse, DCSync, AD CS (ESC1–8), attack paths to DA. |
+| [`entra-cloud-pentest`](skills/entra-cloud-pentest/SKILL.md) | Entra ID (Azure AD) & M365: spray/MFA/CA bypass, OAuth consent, Graph abuse, hybrid paths. |
+
+**🧗 Access & impact**
+| Skill | What it does |
+|-------|--------------|
+| [`privilege-escalation`](skills/privilege-escalation/SKILL.md) | Linux & Windows local privesc (MITRE ATT&CK). |
+| [`post-exploitation`](skills/post-exploitation/SKILL.md) | Situational awareness, credential access, lateral movement, impact — prove & document. |
+| [`social-engineering`](skills/social-engineering/SKILL.md) | Authorized, consented phishing/awareness assessment with employee-protection rules. |
 
 ## 🚀 Install
 
@@ -50,34 +89,35 @@ git clone https://github.com/noahfranklin/gideon.git
 cp -r gideon/skills/* ~/.claude/skills/
 ```
 
-**Project-scoped (share with your team via the repo):**
+**Project-scoped (share with your team):**
 ```bash
-mkdir -p .claude/skills
-cp -r gideon/skills/* .claude/skills/
+mkdir -p .claude/skills && cp -r gideon/skills/* .claude/skills/
 ```
 
-Then just ask, e.g. *"Audit this API against the OWASP API Top 10"* or *"Red-team our chatbot for prompt injection"* — Claude picks the matching skill from its description.
-
-**Codex / other agents:** the skills are provider-neutral Markdown. Point your agent's skill/instruction loader at the `skills/` directory.
+Then just ask — *"Red-team this environment,"* *"Audit this API against the OWASP API Top 10,"* or *"Chain these findings into an attack path"* — and Claude loads the matching skill from its description. **Codex / other agents:** point your skill/instruction loader at the `skills/` directory.
 
 ## 📐 Standards mapping
 
-| Standard | Covered by |
-|----------|-----------|
+| Standard | Skills |
+|----------|--------|
+| OWASP Top 10 (2021) / WSTG | `web-app-pentest` |
 | OWASP API Security Top 10 (2023) | `api-security-audit`, `api-secure-design` |
-| OWASP Top 10 for LLM Applications (2025) | `llm-redteam`, `llm-app-defense` |
+| OWASP MASTG / MASVS | `mobile-pentest` |
+| OWASP Top 10 for LLM Apps (2025) / MITRE ATLAS | `llm-redteam`, `llm-app-defense` |
 | OWASP ASVS | `api-secure-design` |
-| NIST AI RMF (Govern/Map/Measure/Manage) | `llm-app-defense`, `threat-model` |
-| MITRE ATLAS | `llm-redteam`, `llm-app-defense` |
+| MITRE ATT&CK (Enterprise/Cloud/Containers) | `network-pentest`, `active-directory-pentest`, `entra-cloud-pentest`, `cloud-pentest`, `container-k8s-pentest`, `privilege-escalation`, `post-exploitation`, `red-team-ops` |
+| PTES / NIST SP 800-115 | `network-pentest`, `red-team-ops` |
+| NIST AI RMF | `llm-app-defense`, `threat-model` |
 | STRIDE / PASTA | `threat-model` |
+| CIS Benchmarks | `network-device-pentest`, `container-k8s-pentest`, `cloud-pentest` |
 
 ## ⚖️ Use responsibly
 
-These skills are for **authorized** security work only: your own systems, or targets you have explicit written permission to test (a signed engagement, a bug-bounty scope, a CTF, or a lab you own). Testing systems you don't own or aren't cleared for is illegal in most jurisdictions. See [SECURITY.md](SECURITY.md).
+For **authorized** work only: systems you own, or targets you have explicit written permission to test (signed engagement, bug-bounty scope, CTF, or a lab you own). See [SECURITY.md](SECURITY.md). Every skill opens with an authorization / rules-of-engagement gate.
 
 ## 🤝 Contributing
 
-New skills, better checklists, and fresh detections are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Run `python3 scripts/validate_skills.py` before you open a PR.
+New skills, sharper checklists, fresh detections — see [CONTRIBUTING.md](CONTRIBUTING.md). Run `python3 scripts/validate_skills.py` before a PR.
 
 ## 📄 License
 
