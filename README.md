@@ -32,7 +32,30 @@ Two halves of one job:
 - **It chains.** The [`vuln-chaining`](skills/vuln-chaining/SKILL.md) skill combines low-severity primitives into high-impact exploit chains, reasons about attack paths **across domains** (web → cloud → identity), correlates findings to shared root causes, and hunts **novel/logic bugs** — then ranks fixes by how many paths they break.
 - **It's an orchestrated suite, not 20 silos.** [`red-team-ops`](skills/red-team-ops/SKILL.md) runs the engagement lifecycle and routes each phase to the right domain skill.
 - **Standards-mapped.** OWASP (Web/API/LLM/WSTG/MASTG/ASVS), MITRE ATT&CK (incl. Cloud & Containers) & ATLAS, PTES, NIST SP 800-115 & AI RMF, CIS.
-- **Portable & CI-checked.** Plain Markdown + frontmatter; a zero-dependency validator and GitHub Actions keep every skill well-formed.
+- **Portable & CI-checked.** Plain Markdown + frontmatter (with a machine-readable [`skills.json`](skills.json) catalog); a zero-dependency validator and GitHub Actions keep every skill well-formed.
+
+## 🔗 How it fits together
+
+`red-team-ops` runs the engagement and routes each phase to the right skill; `vuln-chaining` correlates everything into attack paths; `report-writing` presents it.
+
+```mermaid
+flowchart LR
+  R[recon-osint] --> W[web / api / mobile]
+  R --> N[network / device / wireless]
+  R --> C[cloud / container]
+  R --> I[AD / Entra ID]
+  W --> PE[privilege-escalation]
+  N --> PE
+  C --> PE
+  I --> PE
+  PE --> PX[post-exploitation]
+  PX --> VC[[vuln-chaining]]
+  W --> VC
+  C --> VC
+  I --> VC
+  VC --> RP[[report-writing]]
+  RTO{{red-team-ops}} -.orchestrates.- R & PE & VC & RP
+```
 
 ## 🧩 The skills
 
@@ -95,6 +118,19 @@ mkdir -p .claude/skills && cp -r gideon/skills/* .claude/skills/
 ```
 
 Then just ask — *"Red-team this environment,"* *"Audit this API against the OWASP API Top 10,"* or *"Chain these findings into an attack path"* — and Claude loads the matching skill from its description. **Codex / other agents:** point your skill/instruction loader at the `skills/` directory.
+
+## 💬 Example prompts
+
+```text
+"Run a black-box red-team assessment of app.example.com — I have written authorization."
+"Audit this API against the OWASP API Security Top 10 and write up the findings."
+"Red-team our RAG chatbot for prompt injection and tool abuse."
+"Chain these findings into an attack path and rank the fixes by paths broken."
+"Test this AD environment for paths to Domain Admin (assumed breach from this host)."
+"Turn my raw notes into a technical report with PoCs and reproduction test cases."
+```
+
+Claude loads the matching skill from its description, follows the authorization gate, then works the methodology.
 
 ## 📐 Standards mapping
 

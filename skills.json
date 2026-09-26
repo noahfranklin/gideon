@@ -1,0 +1,187 @@
+{
+  "name": "Gideon",
+  "description": "Offensive & defensive security skills for Claude Code and Codex.",
+  "version": "1.0",
+  "license": "MIT",
+  "repo": "https://github.com/noahfranklin/gideon",
+  "count": 21,
+  "skills": [
+    {
+      "name": "active-directory-pentest",
+      "path": "skills/active-directory-pentest/SKILL.md",
+      "description": "Use when testing an on-prem Active Directory environment \u2014 enumeration, Kerberos attacks (Kerberoasting, AS-REP roasting, delegation abuse), credential access (NTLM/hashes, LSASS, DCSync), ACL/permission abuse, GPO abuse, trust attacks, and domain-privilege-escalation attack paths. Maps to MITRE ATT&CK, with detection signals and remediation. Assumed-breach, authorized engagements only.",
+      "references": [
+        "ad-checklist.md"
+      ]
+    },
+    {
+      "name": "api-secure-design",
+      "path": "skills/api-secure-design/SKILL.md",
+      "description": "Use when designing, reviewing, or hardening an API for security \u2014 choosing authentication/authorization, adding rate limiting and quotas, validating input/schemas, managing secrets and TLS, configuring CORS, setting security headers, and logging. Provides a secure-by-design checklist and remediation guidance mapped to OWASP API Top 10 and OWASP ASVS. Defensive/blue-team companion to api-security-audit.",
+      "references": [
+        "hardening-checklist.md",
+        "secure-defaults.md"
+      ]
+    },
+    {
+      "name": "api-security-audit",
+      "path": "skills/api-security-audit/SKILL.md",
+      "description": "Use when testing or auditing an API for security vulnerabilities \u2014 REST, GraphQL, gRPC, or WebSocket \u2014 including authentication/authorization, BOLA/IDOR, mass assignment, SSRF, rate limiting, and security misconfiguration. Maps findings to the OWASP API Security Top 10 (2023) and produces test steps, detection signals, and remediation for each. For authorized engagements only.",
+      "references": [
+        "graphql-checklist.md",
+        "report-template.md",
+        "testing-checklist.md"
+      ]
+    },
+    {
+      "name": "cloud-pentest",
+      "path": "skills/cloud-pentest/SKILL.md",
+      "description": "Use when testing cloud environments (AWS, Azure, GCP) for security weaknesses \u2014 IAM misconfiguration and privilege escalation, exposed storage/secrets, public/misconfigured services, SSRF-to-metadata credential theft, serverless and container-service risks, logging gaps, and lateral movement across accounts/subscriptions/projects. Maps to MITRE ATT&CK Cloud and provider benchmarks. Authorized engagements only.",
+      "references": [
+        "cloud-checklist.md"
+      ]
+    },
+    {
+      "name": "container-k8s-pentest",
+      "path": "skills/container-k8s-pentest/SKILL.md",
+      "description": "Use when testing container and Kubernetes security \u2014 image and registry weaknesses, insecure container configuration (privileged, host mounts, capabilities), container escape, Kubernetes RBAC and API-server exposure, secrets handling, network policy gaps, and pod-to-cluster privilege escalation. Maps to MITRE ATT&CK Containers and CIS benchmarks. Authorized engagements only.",
+      "references": [
+        "container-checklist.md"
+      ]
+    },
+    {
+      "name": "entra-cloud-pentest",
+      "path": "skills/entra-cloud-pentest/SKILL.md",
+      "description": "Use when testing Microsoft Entra ID (Azure AD) and Microsoft 365 identity security \u2014 tenant/user enumeration, authentication attacks (password spray, MFA gaps, legacy auth), conditional-access bypass, OAuth/app-consent abuse, privileged-role and Graph API abuse, and hybrid AD-to-cloud (and cloud-to-AD) attack paths. Maps to MITRE ATT&CK, with detection and remediation. Authorized engagements only.",
+      "references": [
+        "entra-checklist.md"
+      ]
+    },
+    {
+      "name": "llm-app-defense",
+      "path": "skills/llm-app-defense/SKILL.md",
+      "description": "Use when designing or hardening an AI/LLM application against attacks \u2014 defending against prompt injection, insecure output handling, excessive agency/tool abuse, sensitive-data disclosure, and RAG poisoning. Provides defense-in-depth controls, least-privilege tool design, human-in-the-loop patterns, monitoring, and red-team CI, mapped to OWASP LLM Top 10 (2025), NIST AI RMF, and MITRE ATLAS. Defensive companion to llm-redteam.",
+      "references": [
+        "defense-checklist.md",
+        "deployment-checklist.md"
+      ]
+    },
+    {
+      "name": "llm-redteam",
+      "path": "skills/llm-redteam/SKILL.md",
+      "description": "Use when red-teaming or security-testing an AI/LLM application \u2014 testing for prompt injection (direct and indirect), jailbreaks, system-prompt leakage, sensitive-data disclosure, insecure output handling, excessive agency/tool abuse, and RAG/vector weaknesses. Maps to the OWASP Top 10 for LLM Applications (2025) and MITRE ATLAS, and defines a repeatable eval-harness approach. For authorized testing of systems you own or are cleared to assess.",
+      "references": [
+        "eval-harness.md",
+        "rag-security.md",
+        "report-template.md"
+      ]
+    },
+    {
+      "name": "mobile-pentest",
+      "path": "skills/mobile-pentest/SKILL.md",
+      "description": "Use when testing an Android or iOS mobile application for security issues \u2014 insecure data storage, weak crypto, insecure communication, authentication, platform misuse, reverse engineering / tampering resistance, and hardcoded secrets. Follows OWASP MASTG/MASVS and covers static, dynamic, and network testing. Authorized engagements only.",
+      "references": [
+        "mobile-checklist.md"
+      ]
+    },
+    {
+      "name": "network-device-pentest",
+      "path": "skills/network-device-pentest/SKILL.md",
+      "description": "Use when testing network devices and appliances \u2014 routers, switches, firewalls, VPN concentrators, load balancers, wireless controllers, and management planes (Cisco, Juniper, Fortinet, Palo Alto, MikroTik, etc.). Covers management-interface exposure, default/weak credentials, insecure protocols, firmware/CVE exposure, SNMP, and configuration review. Authorized engagements only.",
+      "references": [
+        "device-checklist.md"
+      ]
+    },
+    {
+      "name": "network-pentest",
+      "path": "skills/network-pentest/SKILL.md",
+      "description": "Use when testing network infrastructure \u2014 external or internal \u2014 for security weaknesses: host/service discovery, vulnerability identification, common service misconfigurations (SMB, RDP, SSH, SNMP, LDAP, databases), network-level attacks (relay, poisoning), and pivoting. Follows PTES and NIST SP 800-115, mapped to MITRE ATT&CK, with detection and remediation. Authorized engagements only.",
+      "references": [
+        "network-checklist.md"
+      ]
+    },
+    {
+      "name": "post-exploitation",
+      "path": "skills/post-exploitation/SKILL.md",
+      "description": "Use after gaining access during an authorized engagement to demonstrate impact \u2014 situational awareness, credential access, lateral movement, and reaching objectives \u2014 while documenting the path. Covers methodology mapped to MITRE ATT&CK (Discovery, Credential Access, Lateral Movement, Collection, Exfiltration, Impact) with detection signals for the blue team. Authorized engagements only; prove and document rather than cause harm.",
+      "references": [
+        "postex-checklist.md"
+      ]
+    },
+    {
+      "name": "privilege-escalation",
+      "path": "skills/privilege-escalation/SKILL.md",
+      "description": "Use after gaining an initial foothold to escalate privileges on a Linux or Windows host \u2014 enumerating misconfigurations, weak permissions, sudo/SUID issues, service and scheduled-task abuse, credential harvesting, kernel/software vulns, and token/capability abuse. Maps to MITRE ATT&CK Privilege Escalation, with detection and remediation. Authorized engagements only.",
+      "references": [
+        "privesc-checklist.md"
+      ]
+    },
+    {
+      "name": "recon-osint",
+      "path": "skills/recon-osint/SKILL.md",
+      "description": "Use at the start of any authorized red-team or pentest engagement to map the target's attack surface \u2014 passive OSINT (domains, subdomains, certs, DNS, ASN/IP ranges, leaked credentials, employees, tech stack) and active recon (port/service discovery, web asset enumeration). Produces a scoped attack-surface inventory feeding the domain-specific pentest skills. Authorized engagements only.",
+      "references": [
+        "recon-checklist.md"
+      ]
+    },
+    {
+      "name": "red-team-ops",
+      "path": "skills/red-team-ops/SKILL.md",
+      "description": "Use to plan and run a full authorized red-team engagement end to end \u2014 scoping and rules of engagement, threat-actor emulation, the attack lifecycle (recon \u2192 initial access \u2192 execution \u2192 escalation \u2192 lateral movement \u2192 objectives), C2 concepts, deconfliction and safety, evidence handling, and executive + technical reporting. Maps the engagement to MITRE ATT&CK and orchestrates the other Gideon skills. Authorized engagements only.",
+      "references": [
+        "redteam-report-template.md",
+        "roe-template.md"
+      ]
+    },
+    {
+      "name": "report-writing",
+      "path": "skills/report-writing/SKILL.md",
+      "description": "Use when writing up security findings and assessment reports \u2014 structuring each finding (title, description, impact, affected assets, severity/CVSS), building clear proof-of-concept sections with formatted HTTP request/response and highlighted payloads, step-by-step reproduction, and remediation/solution, then assembling the full executive + technical report. Works for black-box and gray-box engagements across web, API, mobile, cloud, network, AD/identity, and AI/LLM. The deliverable that makes all the other skills count.",
+      "references": [
+        "finding-template.md",
+        "poc-formatting.md",
+        "report-skeleton.md"
+      ]
+    },
+    {
+      "name": "social-engineering",
+      "path": "skills/social-engineering/SKILL.md",
+      "description": "Use when planning or running an AUTHORIZED social-engineering assessment \u2014 phishing/spear-phishing simulations, vishing, pretext design, and security-awareness measurement \u2014 as part of a sanctioned engagement. Covers scoping, campaign design, safe execution, metrics, and awareness remediation. Strictly for authorized, consented programs; never for deceiving people outside an approved engagement.",
+      "references": [
+        "se-checklist.md"
+      ]
+    },
+    {
+      "name": "threat-model",
+      "path": "skills/threat-model/SKILL.md",
+      "description": "Use when threat modeling a system \u2014 a web app, API, or AI/LLM application \u2014 to identify assets, trust boundaries, and threats before or during development. Guides STRIDE and PASTA analysis, attack trees, and data-flow diagrams, and produces a prioritized, ready-to-fill threat model with mitigations. Pairs with api-secure-design and llm-app-defense for remediation.",
+      "references": [
+        "threat-model-template.md"
+      ]
+    },
+    {
+      "name": "vuln-chaining",
+      "path": "skills/vuln-chaining/SKILL.md",
+      "description": "Use to move beyond isolated findings \u2014 combine low-severity primitives into high-impact exploit chains, reason about attack paths across domains (web+api+cloud+identity+network), correlate related weaknesses, and hunt for novel/logic vulnerabilities that scanners miss. Provides a primitive taxonomy, chaining and correlation methodology, and attack-path graphing to prioritize the fixes that break the most paths. Authorized engagements only.",
+      "references": [
+        "chaining-playbook.md"
+      ]
+    },
+    {
+      "name": "web-app-pentest",
+      "path": "skills/web-app-pentest/SKILL.md",
+      "description": "Use when testing a web application for security vulnerabilities \u2014 authentication/session, access control (IDOR/privilege escalation), injection (SQLi, XSS, SSTI, command), SSRF, file upload, business logic, CSRF, and misconfiguration. Follows the OWASP Web Security Testing Guide (WSTG) and maps to the OWASP Top 10 (2021), with test steps, detection, and remediation. Authorized engagements only.",
+      "references": [
+        "web-checklist.md"
+      ]
+    },
+    {
+      "name": "wireless-pentest",
+      "path": "skills/wireless-pentest/SKILL.md",
+      "description": "Use when assessing Wi-Fi and wireless network security \u2014 WPA2/WPA3 personal and enterprise (802.1X/EAP), rogue/evil-twin access points, PMKID/handshake weaknesses, guest/segmentation issues, and management-network exposure over wireless. Covers authorized wireless assessment methodology, detection, and remediation. Authorized, on-site/scoped engagements only.",
+      "references": [
+        "wireless-checklist.md"
+      ]
+    }
+  ]
+}
