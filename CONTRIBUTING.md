@@ -9,6 +9,8 @@ Thanks for helping make software more secure. Contributions of new skills, sharp
 3. **Authorization gate.** Any offensive skill must open with a rules-of-engagement / authorization section.
 4. **Self-contained.** Skills should not depend on private tooling or environment variables that ship outside this repo.
 
+<img src="assets/contributing.svg" alt="How to add a Gideon skill" width="100%" />
+
 ## Skill format
 
 Each skill lives in `skills/<skill-name>/SKILL.md` with YAML frontmatter:

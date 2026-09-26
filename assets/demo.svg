@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="380" viewBox="0 0 760 380" role="img" aria-label="Gideon skill in action (animated)">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c1714"/><stop offset="1" stop-color="#241d18"/></linearGradient></defs>
+<style>.m{font-family:'JetBrains Mono',Menlo,Consolas,monospace;font-size:14px}</style>
+<rect width="760" height="380" rx="14" fill="url(#bg)" stroke="#3d322a"/>
+<rect x="1" y="1" width="758" height="36" rx="13" fill="#2a221c"/>
+<circle cx="26" cy="19" r="6" fill="#b23b32"/><circle cx="46" cy="19" r="6" fill="#cf8f2e"/><circle cx="66" cy="19" r="6" fill="#8a9a54"/>
+<text x="380.0" y="24" text-anchor="middle" font-family="Inter,Arial,sans-serif" font-size="12" fill="#8d7c63">gideon — api-security-audit</text>
+<text class="m" x="26" y="72" fill="#e8b45c" opacity="0">$ claude<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.040;0.060;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="99" fill="#f2e8d6" opacity="0">&gt; Audit this API against the OWASP API Top 10<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.100;0.120;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="126" fill="#8d7c63" opacity="0">   (authorized lab: api-lab.example)<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.140;0.160;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="153" fill="#c3b193" opacity="0">⟳ loading skill  api-security-audit<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.220;0.240;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="180" fill="#8a9a54" opacity="0">✓ authorization gate — scope confirmed<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.300;0.320;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="207" fill="#c3b193" opacity="0">→ recon      enumerating endpoints<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.370;0.390;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="234" fill="#c3b193" opacity="0">→ testing    API1 BOLA … API10<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.440;0.460;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="261" fill="#e0902e" opacity="0">⚑ finding    BOLA on /users/{id}  · detect + fix attached<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.530;0.550;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="288" fill="#c3b193" opacity="0">→ vuln-chaining  correlating primitives<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.610;0.630;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="315" fill="#c3b193" opacity="0">→ report-writing  building PoCs + remediation<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.690;0.710;1" dur="10.0s" repeatCount="indefinite"/></text>
+<text class="m" x="26" y="342" fill="#e8b45c" opacity="0">✓ report ready   1 HIGH · 3 MED · reproduction test cases<animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.790;0.810;1" dur="10.0s" repeatCount="indefinite"/></text>
+<rect x="26" y="356" width="9" height="16" fill="#e07b2a" opacity="0"><animate attributeName="opacity" values="0;0;1;0;1;0;1" keyTimes="0;0.8;0.84;0.88;0.92;0.96;1" dur="10.0s" repeatCount="indefinite"/></rect>
+</svg>

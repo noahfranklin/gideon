@@ -16,6 +16,10 @@
 
 ---
 
+<p align="center">
+  <img src="assets/demo.svg" alt="Gideon skill in action" width="88%" />
+</p>
+
 ## What is this?
 
 **Gideon** turns Claude Code (and Codex-style agents) into a rigorous, *authorized* security engineer across **every domain**: web, mobile, API, AI/LLM, network & infrastructure, network devices, wireless, Active Directory, Entra ID / cloud, and containers — plus the connective tissue that real red-teamers live in: reconnaissance, privilege escalation, post-exploitation, social engineering, the full engagement lifecycle, and **vulnerability chaining & correlation**.
@@ -38,12 +42,9 @@ Two halves of one job:
 
 <img src="assets/workflow.svg" alt="Gideon engagement workflow" width="100%" />
 
-<details>
-<summary><strong>System architecture</strong> (click to expand)</summary>
+**System architecture**
 
 <img src="assets/architecture.svg" alt="Gideon architecture" width="100%" />
-
-</details>
 
 📖 Full write-ups: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** · **[docs/WORKFLOW.md](docs/WORKFLOW.md)**
 
@@ -145,6 +146,14 @@ Then just ask — *"Red-team this environment,"* *"Audit this API against the OW
 
 Claude loads the matching skill from its description, follows the authorization gate, then works the methodology.
 
+## 📚 Example walkthroughs
+
+End-to-end, authorized-lab examples of the skills working together (synthetic data, redacted, benign proofs):
+
+- **[Web → Cloud chain](docs/examples/web-to-cloud-chain.md)** — SSRF → metadata creds → IAM privesc → data, and the one choke-point fix.
+- **[API BOLA → account takeover](docs/examples/api-bola-account-takeover.md)** — correlating an IDOR-read with mass-assignment.
+- **[LLM indirect prompt injection](docs/examples/llm-indirect-injection.md)** — canary-based testing + the architectural fix.
+
 ## 📐 Standards mapping
 
 | Standard | Skills |
@@ -165,6 +174,9 @@ Claude loads the matching skill from its description, follows the authorization 
 For **authorized** work only: systems you own, or targets you have explicit written permission to test (signed engagement, bug-bounty scope, CTF, or a lab you own). See [SECURITY.md](SECURITY.md). Every skill opens with an authorization / rules-of-engagement gate.
 
 ## 🤝 Contributing
+
+<img src="assets/contributing.svg" alt="How to add a Gideon skill" width="100%" />
+
 
 New skills, sharper checklists, fresh detections — see [CONTRIBUTING.md](CONTRIBUTING.md). Run `python3 scripts/validate_skills.py` before a PR.
 

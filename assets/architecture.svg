@@ -1,77 +1,64 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600" role="img" aria-label="Gideon architecture">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b0f19"/><stop offset="1" stop-color="#111827"/></linearGradient>
-    <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2dd4bf"/><stop offset="1" stop-color="#0f766e"/></linearGradient>
-    <marker id="ar" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#334155"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1c1714"/><stop offset="1" stop-color="#28211b"/></linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e8b45c"/><stop offset="1" stop-color="#e07b2a"/></linearGradient>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#8d7c63"/></marker>
   </defs>
   <style>
     .t{font-family:Inter,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
-    .h{font-weight:700;fill:#f1f5f9}.s{fill:#94a3b8}.d{fill:#64748b}.w{fill:#f1f5f9}
+    .h{font-weight:700;fill:#f2e8d6}.s{fill:#c3b193}.d{fill:#8d7c63}
     .lbl{font-size:12px;font-weight:700;letter-spacing:1px}
   </style>
-  <rect width="1000" height="600" rx="16" fill="url(#bg)" stroke="#1f2937"/>
+  <rect width="1000" height="600" rx="16" fill="url(#bg)" stroke="#3d322a"/>
   <text class="t h" x="40" y="44" font-size="22">Gideon — how the skills work</text>
   <text class="t d" x="40" y="66" font-size="12">Authorization-first Agent Skills, loaded on demand, mapped to standards, producing a report.</text>
 
-  <!-- Layer 1: operator -->
-  <rect x="40" y="86" width="920" height="52" rx="10" fill="#0f172a" stroke="#1f2937"/>
+  <rect x="40" y="86" width="920" height="52" rx="10" fill="#241d18" stroke="#3d322a"/>
   <rect x="40" y="86" width="4" height="52" rx="2" fill="url(#acc)"/>
   <text class="t lbl s" x="60" y="108">AUTHORIZED OPERATOR</text>
   <text class="t d" x="60" y="126" font-size="12">Defines scope &amp; rules of engagement · owns the target or has written permission</text>
-  <line x1="500" y1="138" x2="500" y2="158" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="500" y1="138" x2="500" y2="158" stroke="#8d7c63" stroke-width="2" marker-end="url(#ar)"/>
 
-  <!-- Layer 2: agent runtime -->
-  <rect x="40" y="160" width="920" height="60" rx="10" fill="#0f172a" stroke="#1f2937"/>
+  <rect x="40" y="160" width="920" height="60" rx="10" fill="#241d18" stroke="#3d322a"/>
   <rect x="40" y="160" width="4" height="60" rx="2" fill="url(#acc)"/>
   <text class="t lbl s" x="60" y="184">AGENT RUNTIME — Claude Code / Codex</text>
-  <text class="t d" x="60" y="204" font-size="12">Reads each SKILL.md <tspan fill="#94a3b8">description</tspan> and loads the matching skill just-in-time</text>
-  <line x1="500" y1="220" x2="500" y2="240" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <text class="t d" x="60" y="204" font-size="12">Reads each SKILL.md <tspan fill="#c3b193">description</tspan> and loads the matching skill just-in-time</text>
+  <line x1="500" y1="220" x2="500" y2="240" stroke="#8d7c63" stroke-width="2" marker-end="url(#ar)"/>
 
-  <!-- Layer 3: skill categories -->
   <text class="t lbl s" x="40" y="256">GIDEON SKILLS (21) — grouped by domain</text>
   <g font-size="12">
-    <!-- row of 3 -->
-    <rect x="40" y="266" width="298" height="58" rx="9" fill="#111827" stroke="#1f2937"/>
+    <rect x="40" y="266" width="298" height="58" rx="9" fill="#2a221c" stroke="#3d322a"/>
     <text class="t h" x="56" y="290" font-size="13">🎯 Ops &amp; analysis</text>
     <text class="t d" x="56" y="310">red-team-ops · vuln-chaining · recon-osint · threat-model</text>
-
-    <rect x="351" y="266" width="298" height="58" rx="9" fill="#111827" stroke="#1f2937"/>
+    <rect x="351" y="266" width="298" height="58" rx="9" fill="#2a221c" stroke="#3d322a"/>
     <text class="t h" x="367" y="290" font-size="13">🌐 AppSec</text>
     <text class="t d" x="367" y="310">web · api-audit · api-design · mobile</text>
-
-    <rect x="662" y="266" width="298" height="58" rx="9" fill="#111827" stroke="#1f2937"/>
+    <rect x="662" y="266" width="298" height="58" rx="9" fill="#2a221c" stroke="#3d322a"/>
     <text class="t h" x="678" y="290" font-size="13">🤖 AI / LLM</text>
     <text class="t d" x="678" y="310">llm-redteam · llm-app-defense</text>
-
-    <!-- row of 3 -->
-    <rect x="40" y="332" width="298" height="58" rx="9" fill="#111827" stroke="#1f2937"/>
+    <rect x="40" y="332" width="298" height="58" rx="9" fill="#2a221c" stroke="#3d322a"/>
     <text class="t h" x="56" y="356" font-size="13">🖧 Infra / network / cloud</text>
     <text class="t d" x="56" y="376">network · device · wireless · cloud · container-k8s</text>
-
-    <rect x="351" y="332" width="298" height="58" rx="9" fill="#111827" stroke="#1f2937"/>
+    <rect x="351" y="332" width="298" height="58" rx="9" fill="#2a221c" stroke="#3d322a"/>
     <text class="t h" x="367" y="356" font-size="13">🪪 Identity</text>
     <text class="t d" x="367" y="376">active-directory · entra-cloud</text>
-
-    <rect x="662" y="332" width="298" height="58" rx="9" fill="#111827" stroke="#1f2937"/>
+    <rect x="662" y="332" width="298" height="58" rx="9" fill="#2a221c" stroke="#3d322a"/>
     <text class="t h" x="678" y="356" font-size="13">🧗 Access &amp; impact + delivery</text>
     <text class="t d" x="678" y="376">privesc · post-ex · social-eng · report-writing</text>
   </g>
-  <line x1="500" y1="390" x2="500" y2="410" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="500" y1="390" x2="500" y2="410" stroke="#8d7c63" stroke-width="2" marker-end="url(#ar)"/>
 
-  <!-- Layer 4: standards -->
-  <rect x="40" y="412" width="920" height="52" rx="10" fill="#0f172a" stroke="#1f2937"/>
+  <rect x="40" y="412" width="920" height="52" rx="10" fill="#241d18" stroke="#3d322a"/>
   <rect x="40" y="412" width="4" height="52" rx="2" fill="url(#acc)"/>
   <text class="t lbl s" x="60" y="434">EVERY TECHNIQUE MAPPED TO STANDARDS</text>
   <text class="t d" x="60" y="452" font-size="12">OWASP (Web/API/LLM/WSTG/MASTG/ASVS) · MITRE ATT&amp;CK + ATLAS · PTES · NIST 800-115 &amp; AI RMF · CIS</text>
-  <line x1="500" y1="464" x2="500" y2="484" stroke="#334155" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="500" y1="464" x2="500" y2="484" stroke="#8d7c63" stroke-width="2" marker-end="url(#ar)"/>
 
-  <!-- Layer 5: outputs -->
-  <rect x="40" y="486" width="452" height="80" rx="10" fill="#111827" stroke="#0f766e"/>
+  <rect x="40" y="486" width="452" height="80" rx="10" fill="#2a221c" stroke="#e07b2a"/>
   <text class="t h" x="60" y="512" font-size="14">🔗 Attack-path graph</text>
   <text class="t d" x="60" y="534" font-size="12">Primitives chained across domains;</text>
   <text class="t d" x="60" y="550" font-size="12">choke-point fixes that break the most paths.</text>
-
-  <rect x="508" y="486" width="452" height="80" rx="10" fill="#111827" stroke="#0f766e"/>
+  <rect x="508" y="486" width="452" height="80" rx="10" fill="#2a221c" stroke="#e07b2a"/>
   <text class="t h" x="528" y="512" font-size="14">📄 Technical + exec report</text>
   <text class="t d" x="528" y="534" font-size="12">Findings, CVSS, PoCs (HTTP req/resp),</text>
   <text class="t d" x="528" y="550" font-size="12">reproduction test cases, remediation.</text>
