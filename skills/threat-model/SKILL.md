@@ -56,3 +56,6 @@ Prioritize by **likelihood × impact**; track as issues with owners and due date
 
 ## Deliverable
 Fill `references/threat-model-template.md`. Keep it in the repo next to the design docs so it evolves with the system.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

@@ -42,3 +42,6 @@ Prioritize by exposure × likely impact. Hand web assets to `web-app-pentest`, A
 Recon findings are attack-surface-reduction wins: retire stale subdomains/hosts, fix DNS hygiene (SPF/DMARC), remove exposed storage/dashboards, rotate leaked credentials, and monitor cert transparency for rogue domains.
 
 See `references/recon-checklist.md`.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

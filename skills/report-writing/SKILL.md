@@ -85,3 +85,6 @@ Make each finding a repeatable **test case** so the client can verify the fix an
 - [ ] Chains and root-cause correlations captured (see `vuln-chaining`).
 
 Templates: `references/finding-template.md`, `references/poc-formatting.md`, `references/report-skeleton.md`.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

@@ -63,3 +63,6 @@ Deliver a ranked list where severity reflects **chain impact**, not just individ
 
 ## 7. Reporting
 Present: primitive inventory, the attack-path graph, each realized chain (with the goal reached), correlated root causes, and choke-point remediations. Feed into `red-team-ops` reporting. See `references/chaining-playbook.md`.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

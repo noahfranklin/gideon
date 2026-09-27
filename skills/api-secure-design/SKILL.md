@@ -73,3 +73,6 @@ A secure-by-design review and hardening playbook for APIs. Use it during design 
 - OWASP ASVS: use as the detailed verification checklist (V2 Auth, V4 Access Control, V5 Validation, V7 Crypto, V9 Comms, V13 API).
 
 See `references/hardening-checklist.md` for a condensed pass/fail list and `references/secure-defaults.md` for sensible starting configurations.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

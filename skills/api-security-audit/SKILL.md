@@ -101,3 +101,6 @@ Work one endpoint at a time, tracking: method, path, params, auth required, role
 For each finding record: title, OWASP API category, affected endpoint(s), severity (CVSS + business impact), reproduction steps, evidence, and concrete remediation. Group by severity, lead with an executive summary, and provide a remediation-priority table.
 
 See `references/report-template.md` for a ready-to-fill format and `references/testing-checklist.md` for a printable pass/fail matrix.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

@@ -182,4 +182,4 @@ New skills, sharper checklists, fresh detections — see [CONTRIBUTING.md](CONTR
 
 ## 📄 License
 
-MIT © noahfranklin — see [LICENSE](LICENSE).
+MIT © 2026 **noahfranklin** — see [LICENSE](LICENSE). Gideon is an **original work** created and maintained by noahfranklin (see [AUTHORS](AUTHORS) / [NOTICE](NOTICE)); references to standards and named tools are nominative only and imply no affiliation or endorsement.

@@ -52,3 +52,6 @@ Understand command-and-control and redirector concepts for realistic emulation a
 - Prioritize fixes by how many attack paths they break (see `vuln-chaining`).
 
 See `references/roe-template.md` and `references/redteam-report-template.md`.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

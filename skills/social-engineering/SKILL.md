@@ -40,3 +40,6 @@ This skill is for programs where the target *organization* consents. It must not
 
 ## 6. Reporting
 Aggregate metrics + trends + recommended controls and training. Never single out individuals for blame. Checklist: `references/se-checklist.md`.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

@@ -89,3 +89,6 @@ Map findings to **MITRE ATLAS** tactics/techniques (recon, ML supply chain, prom
 
 ## 6. Reporting
 Per finding: category (OWASP LLM / ATLAS), entry point, trigger conditions, observed unsafe behavior, business/safety impact, reproduction (authorized scope), and remediation. Use `references/report-template.md`. Pair remediation with the `llm-app-defense` skill.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

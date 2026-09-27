@@ -64,3 +64,6 @@ Defense-in-depth for LLM-powered applications. Use during design and code review
 - **MITRE ATLAS:** use for threat vocabulary and to ensure defensive coverage of known techniques.
 
 See `references/defense-checklist.md` and `references/deployment-checklist.md`.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>

@@ -39,3 +39,6 @@ linpeas/linenum, pspy (Linux); winPEAS, PowerUp/SharpUp, Seatbelt (Windows). Tre
 
 ## 5. Reporting
 Per finding: host, misconfig/vuln, escalation achieved, severity, remediation. Feed chains into `vuln-chaining`. Checklist: `references/privesc-checklist.md`.
+
+---
+<sub>© 2026 noahfranklin · Part of the [Gideon](https://github.com/noahfranklin/gideon) security suite · MIT License · Original work.</sub>
