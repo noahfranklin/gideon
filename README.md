@@ -22,12 +22,12 @@
 
 ## What is this?
 
-**Gideon** turns Claude Code (and Codex-style agents) into a rigorous, *authorized* security engineer across **every domain**: web, mobile, API, AI/LLM, network & infrastructure, network devices, wireless, Active Directory, Entra ID / cloud, and containers — plus the connective tissue that real red-teamers live in: reconnaissance, privilege escalation, post-exploitation, social engineering, the full engagement lifecycle, and **vulnerability chaining & correlation**.
+**Gideon** turns Claude Code (and Codex-style agents) into a rigorous, *authorized* security engineer across **every domain**: web, mobile, API, AI/LLM (including **agents, tool-use & MCP**), network & infrastructure, network devices, wireless, Active Directory, Entra ID / cloud, containers, **IoT/embedded**, **source code**, and the **CI/CD & software supply chain** — plus the connective tissue that real red-teamers live in: reconnaissance, privilege escalation, post-exploitation, social engineering, **detection engineering**, the full engagement lifecycle, and **vulnerability chaining & correlation**.
 
 Two halves of one job:
 
 - **🔴 Offense** — attack-path-driven methodology to find what an attacker would find, *chain* small bugs into big ones, and hunt the novel/logic vulnerabilities scanners miss.
-- **🔵 Defense** — secure-by-design checklists, hardening playbooks, threat models, and detection guidance so you fix the causes, not just the symptoms.
+- **🔵 Defense** — secure-by-design checklists, hardening playbooks, threat models, secure code review, and **purple-team detection engineering** so you fix the causes — and catch the next attacker, not just the symptoms.
 
 **Every skill is defensive in purpose and authorization-first.** They deliver *methodology, techniques by name, detection signals, and concrete remediation* — not drop-in weaponized exploits, mass-scanning tooling, or detection-evasion tradecraft. That's the line that keeps this useful for defenders and safe to publish.
 
@@ -174,12 +174,16 @@ End-to-end, authorized-lab examples of the skills working together (synthetic da
 | OWASP Top 10 (2021) / WSTG | `web-app-pentest` |
 | OWASP API Security Top 10 (2023) | `api-security-audit`, `api-secure-design` |
 | OWASP MASTG / MASVS | `mobile-pentest` |
-| OWASP Top 10 for LLM Apps (2025) / MITRE ATLAS | `llm-redteam`, `llm-app-defense` |
+| OWASP Top 10 for LLM Apps (2025) / MITRE ATLAS | `llm-redteam`, `llm-app-defense`, `agentic-ai-security` |
 | OWASP ASVS | `api-secure-design` |
 | MITRE ATT&CK (Enterprise/Cloud/Containers) | `network-pentest`, `active-directory-pentest`, `entra-cloud-pentest`, `cloud-pentest`, `container-k8s-pentest`, `privilege-escalation`, `post-exploitation`, `red-team-ops` |
 | PTES / NIST SP 800-115 | `network-pentest`, `red-team-ops` |
 | NIST AI RMF | `llm-app-defense`, `threat-model` |
 | STRIDE / PASTA | `threat-model` |
+| OWASP Top 10 CI/CD Security Risks / SLSA / Sigstore | `cicd-supplychain-security` |
+| OWASP IoT Top 10 / firmware testing | `iot-embedded-pentest` |
+| CWE / source→sink taint analysis | `source-code-review` |
+| Sigma / MITRE ATT&CK detection coverage | `detection-engineering` |
 | CIS Benchmarks | `network-device-pentest`, `container-k8s-pentest`, `cloud-pentest` |
 
 ## ⚖️ Use responsibly
