@@ -7,7 +7,7 @@
 *"With the three hundred… I will save you." — Judges 7:7*
 *A small, disciplined force — recon, precision, and clever tactics — beats a bigger enemy. That's red-teaming done right.*
 
-[![Skills](https://img.shields.io/badge/skills-21-blue)](#-the-skills)
+[![Skills](https://img.shields.io/badge/skills-26-blue)](#-the-skills)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](LICENSE)
 [![Validate Skills](https://github.com/noahfranklin/gideon/actions/workflows/validate-skills.yml/badge.svg)](.github/workflows/validate-skills.yml)
 [![Standards](https://img.shields.io/badge/mapped-OWASP%20%7C%20MITRE%20ATT%26CK%20%7C%20PTES%20%7C%20NIST-orange)](#-standards-mapping)
@@ -46,7 +46,7 @@ Two halves of one job:
 
 <img src="assets/architecture.svg" alt="Gideon architecture" width="100%" />
 
-📖 Full write-ups: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** · **[docs/WORKFLOW.md](docs/WORKFLOW.md)**
+📖 Full write-ups: **[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)** · **[docs/WORKFLOW.md](docs/WORKFLOW.md)** · **[docs/GAP-ANALYSIS.md](docs/GAP-ANALYSIS.md)**
 
 ## 🔗 How it fits together
 
@@ -95,6 +95,7 @@ flowchart LR
 |-------|--------------|
 | [`llm-redteam`](skills/llm-redteam/SKILL.md) | OWASP LLM Top 10 (2025) + MITRE ATLAS: prompt injection, tool/agent abuse, RAG poisoning, plus an eval-harness. |
 | [`llm-app-defense`](skills/llm-app-defense/SKILL.md) | 🔵 Defense-in-depth for LLM apps: I/O mediation, least-privilege tools, human-in-the-loop, red-team CI. |
+| [`agentic-ai-security`](skills/agentic-ai-security/SKILL.md) | AI agents, tool/function calling & **MCP** servers: tool poisoning, confused-deputy, indirect injection via tools, memory poisoning, least-privilege broker. |
 
 **🖧 Infrastructure, network & cloud**
 | Skill | What it does |
@@ -117,6 +118,18 @@ flowchart LR
 | [`privilege-escalation`](skills/privilege-escalation/SKILL.md) | Linux & Windows local privesc (MITRE ATT&CK). |
 | [`post-exploitation`](skills/post-exploitation/SKILL.md) | Situational awareness, credential access, lateral movement, impact — prove & document. |
 | [`social-engineering`](skills/social-engineering/SKILL.md) | Authorized, consented phishing/awareness assessment with employee-protection rules. |
+
+**🧪 Code, supply chain & devices**
+| Skill | What it does |
+|-------|--------------|
+| [`source-code-review`](skills/source-code-review/SKILL.md) | White-box review: source→sink taint tracing, authz/logic review, SAST triage, and variant analysis to kill a bug *class*. |
+| [`cicd-supplychain-security`](skills/cicd-supplychain-security/SKILL.md) | CI/CD pipeline attacks, dependency confusion, artifact integrity & provenance (OWASP CI/CD, SLSA, Sigstore). |
+| [`iot-embedded-pentest`](skills/iot-embedded-pentest/SKILL.md) | Firmware analysis, hardware debug interfaces, device↔cloud APIs, and BLE/Zigbee/MQTT (OWASP IoT Top 10). |
+
+**🔵 Detection**
+| Skill | What it does |
+|-------|--------------|
+| [`detection-engineering`](skills/detection-engineering/SKILL.md) | Turn offensive TTPs into validated detections: telemetry → Sigma-style logic → ATT&CK coverage. Purple-team counterpart to `red-team-ops`. |
 
 ## 🚀 Install
 

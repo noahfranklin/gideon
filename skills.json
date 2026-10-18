@@ -1,10 +1,12 @@
 {
   "name": "Gideon",
   "description": "Offensive & defensive security skills for Claude Code and Codex.",
-  "version": "1.0",
+  "version": "1.1",
   "license": "MIT",
+  "author": "noahfranklin",
+  "copyright": "\u00a9 2026 noahfranklin. MIT License. Original work.",
   "repo": "https://github.com/noahfranklin/gideon",
-  "count": 21,
+  "count": 26,
   "skills": [
     {
       "name": "active-directory-pentest",
@@ -12,6 +14,14 @@
       "description": "Use when testing an on-prem Active Directory environment \u2014 enumeration, Kerberos attacks (Kerberoasting, AS-REP roasting, delegation abuse), credential access (NTLM/hashes, LSASS, DCSync), ACL/permission abuse, GPO abuse, trust attacks, and domain-privilege-escalation attack paths. Maps to MITRE ATT&CK, with detection signals and remediation. Assumed-breach, authorized engagements only.",
       "references": [
         "ad-checklist.md"
+      ]
+    },
+    {
+      "name": "agentic-ai-security",
+      "path": "skills/agentic-ai-security/SKILL.md",
+      "description": "Use when securing or red-teaming AI agents and tool-using LLM systems \u2014 autonomous/multi-step agents, tool and function calling, Model Context Protocol (MCP) servers and clients, multi-agent orchestration, and computer-use agents. Covers tool-poisoning, confused-deputy and excessive-agency abuse, indirect prompt injection via tools/MCP, memory/state poisoning, and the least-privilege broker pattern. Extends llm-redteam / llm-app-defense to agents. Authorized testing only.",
+      "references": [
+        "agentic-checklist.md"
       ]
     },
     {
@@ -34,6 +44,14 @@
       ]
     },
     {
+      "name": "cicd-supplychain-security",
+      "path": "skills/cicd-supplychain-security/SKILL.md",
+      "description": "Use when assessing CI/CD pipelines and the software supply chain \u2014 build-system and pipeline attacks (poisoned pipeline execution, unsafe workflow triggers, secret exfiltration from runners), dependency and artifact integrity, registry/package risks, signing and provenance (SLSA, Sigstore), and IaC/config in the pipeline. Maps to OWASP CICD Top 10 and SLSA, with detection and remediation. Authorized assessment of pipelines you own.",
+      "references": [
+        "cicd-checklist.md"
+      ]
+    },
+    {
       "name": "cloud-pentest",
       "path": "skills/cloud-pentest/SKILL.md",
       "description": "Use when testing cloud environments (AWS, Azure, GCP) for security weaknesses \u2014 IAM misconfiguration and privilege escalation, exposed storage/secrets, public/misconfigured services, SSRF-to-metadata credential theft, serverless and container-service risks, logging gaps, and lateral movement across accounts/subscriptions/projects. Maps to MITRE ATT&CK Cloud and provider benchmarks. Authorized engagements only.",
@@ -50,11 +68,27 @@
       ]
     },
     {
+      "name": "detection-engineering",
+      "path": "skills/detection-engineering/SKILL.md",
+      "description": "Use to turn offensive findings into defenses that catch the next attacker \u2014 building and validating detections for the techniques the red-team skills exercise. Covers log/telemetry sourcing, MITRE ATT&CK coverage mapping, writing detection logic (Sigma-style, portable), reducing false positives, and purple-team validation. The blue-team companion that closes the loop from red-team-ops and vuln-chaining. For your own environment.",
+      "references": [
+        "detection-checklist.md"
+      ]
+    },
+    {
       "name": "entra-cloud-pentest",
       "path": "skills/entra-cloud-pentest/SKILL.md",
       "description": "Use when testing Microsoft Entra ID (Azure AD) and Microsoft 365 identity security \u2014 tenant/user enumeration, authentication attacks (password spray, MFA gaps, legacy auth), conditional-access bypass, OAuth/app-consent abuse, privileged-role and Graph API abuse, and hybrid AD-to-cloud (and cloud-to-AD) attack paths. Maps to MITRE ATT&CK, with detection and remediation. Authorized engagements only.",
       "references": [
         "entra-checklist.md"
+      ]
+    },
+    {
+      "name": "iot-embedded-pentest",
+      "path": "skills/iot-embedded-pentest/SKILL.md",
+      "description": "Use when assessing IoT / embedded device security \u2014 firmware analysis (extraction, hardcoded secrets, outdated components), hardware interfaces (UART/JTAG/SPI debug), device-to-cloud and mobile companion APIs, and wireless protocols (BLE, Zigbee, MQTT/CoAP). Follows the OWASP IoT Top 10 and firmware security testing methodology, with detection and remediation. Authorized testing of devices you own or are cleared to assess.",
+      "references": [
+        "iot-checklist.md"
       ]
     },
     {
@@ -152,6 +186,14 @@
       ]
     },
     {
+      "name": "source-code-review",
+      "path": "skills/source-code-review/SKILL.md",
+      "description": "Use when reviewing source code for security vulnerabilities (white-box / gray-box) \u2014 tracing untrusted input from source to dangerous sink, auditing authentication/authorization logic, finding injection, deserialization, SSRF, path traversal, secrets, and unsafe crypto, triaging SAST output, and performing variant analysis to find every instance of a bug class. Produces findings with the vulnerable code path and a fix. Authorized review of code you own or are cleared to audit.",
+      "references": [
+        "review-checklist.md"
+      ]
+    },
+    {
       "name": "threat-model",
       "path": "skills/threat-model/SKILL.md",
       "description": "Use when threat modeling a system \u2014 a web app, API, or AI/LLM application \u2014 to identify assets, trust boundaries, and threats before or during development. Guides STRIDE and PASTA analysis, attack trees, and data-flow diagrams, and produces a prioritized, ready-to-fill threat model with mitigations. Pairs with api-secure-design and llm-app-defense for remediation.",
@@ -183,7 +225,5 @@
         "wireless-checklist.md"
       ]
     }
-  ],
-  "author": "noahfranklin",
-  "copyright": "\u00a9 2026 noahfranklin. MIT License. Original work."
+  ]
 }

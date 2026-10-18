@@ -72,6 +72,8 @@ Cover these classes systematically; track pass/fail per category in the harness:
 - Tool/agent abuse and privilege escalation through chained tool calls.
 - Data exfiltration paths (getting secrets/PII into outputs or out via tools).
 - Output-handling exploits into each downstream sink.
+- Multi-turn / gradual attacks (an objective split across turns to evade per-message filtering).
+- **Agentic & tool/MCP attacks** — tool poisoning, confused-deputy, indirect injection via tool/MCP output. For tool-using agents and MCP servers, use the dedicated **`agentic-ai-security`** skill.
 - Denial-of-wallet / resource exhaustion.
 
 > Keep payloads at the level needed to demonstrate the weakness to the owner. The deliverable is *"this class of input causes this unsafe behavior; here's the fix,"* not a reusable weapon.
